@@ -53,7 +53,7 @@ export default {
     }
   },
   filters: {
-    // 大写
+    // 大小写转换
     upperCase (str) {
       return str.toUpperCase()
     }
