@@ -53,6 +53,7 @@ export default {
     }
   },
   filters: {
+    // 大写
     upperCase (str) {
       return str.toUpperCase()
     }
