@@ -43,7 +43,7 @@ export default {
         this.type = 'A'
       }
     },
-    // 自增
+    // 自增12
     increment () {
       this.count++
     },
