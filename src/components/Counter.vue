@@ -46,6 +46,7 @@ export default {
     increment () {
       this.count++
     },
+    // 异步自增
     incrementByAsync () {
       window.setTimeout(() => {
         this.num++
