@@ -36,6 +36,7 @@ export default {
   computed: {},
 
   methods: {
+    // 改变类型
     changeType () {
       if (this.type === 'A') {
         this.type = ' '
