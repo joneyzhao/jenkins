@@ -20,8 +20,8 @@ pipeline {
 }
 
 
-"test": "npm run unit && npm run e2e",
+// "test": "npm run unit && npm run e2e",
 
-"lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
+// "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
 
-"build": "node build/build.js"
+// "build": "node build/build.js"
