@@ -4,7 +4,7 @@ pipeline {
 	stage('Build1') {
             steps {
                 echo 'java version'
-                bat 'java -version'    
+                bat 'java -version || true'   
             }
         }
 	stage('Build2') {
