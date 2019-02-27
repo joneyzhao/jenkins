@@ -1,13 +1,13 @@
 pipeline {
     agent any
     stages {
-	stage('°²×°ÒÀÀµ') {
-            steps {
-                echo 'npm-install'
-                bat 'npm install --verbose'
-            }
-        }
-        stage('Build3') {
+	    // stage('ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½') {
+        //     steps {
+        //         echo 'npm-install'
+        //         bat 'npm install --verbose'
+        //     }
+        // }
+        stage('Build') {
             steps {
                 echo 'building'
                 bat 'node build/build.js'    
