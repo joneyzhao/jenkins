@@ -3,12 +3,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'    
+                echo 'node build/build.js'    
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'npm run unit && npm run e2e'
+            }
+        }
+        stage('lint') {
+            steps {
+                echo 'eslint --ext .js,.vue src test/unit test/e2e/specs'
             }
         }
         stage('Deploy') {
