@@ -4,31 +4,31 @@ pipeline {
 	stage('Build1') {
             steps {
                 echo 'java version'
-                sh 'java -version'    
+                bat 'java -version'    
             }
         }
 	stage('Build2') {
             steps {
                 echo 'npm-install'
-                sh 'npm install'    
+                bat 'npm install'    
             }
         }
         stage('Build3') {
             steps {
                 echo 'building'
-                sh 'node build/build.js'    
+                bat 'node build/build.js'    
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing'
-                sh 'npm run unit && npm run e2e'
+                bat 'npm run unit && npm run e2e'
             }
         }
         stage('lint') {
             steps {
                 echo 'lintCode'
-                sh 'eslint --ext .js,.vue src test/unit test/e2e/specs'
+                bat 'eslint --ext .js,.vue src test/unit test/e2e/specs'
             }
         }
         stage('Deploy') {
