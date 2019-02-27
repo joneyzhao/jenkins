@@ -1,6 +1,18 @@
 pipeline {
     agent any
     stages {
+	stage('Build') {
+            steps {
+                echo 'java version'
+                sh 'java -version'    
+            }
+        }
+	stage('Build') {
+            steps {
+                echo 'npm-install'
+                sh 'npm install'    
+            }
+        }
         stage('Build') {
             steps {
                 echo 'building'
