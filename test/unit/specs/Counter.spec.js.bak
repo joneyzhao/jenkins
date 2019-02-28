@@ -24,7 +24,7 @@ describe('Counter.vue', () => {
     expect(vm.$el.querySelector('.selectA').textContent).to.equal('Apple')
   })
   it('when type is B return Bable', () => {
-    // 断言组件tyep为B的时候值为Bable
+    // 断言组件tyep为B的时候值为Bable 
     expect(vm.$el.querySelector('.selectB').textContent).to.equal('Bable')
   })
   it('changeType from !A to A or A to !A ', () => {
