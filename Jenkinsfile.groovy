@@ -26,8 +26,11 @@ pipeline {
            }
        }
         stage('Deploy') {
+            def dist = 'C:/Users/赵欢欢/Desktop/jenkins练习/jenkins/dist>'
             steps {
                 echo 'Deploying....'
+                sh 'npm install http-server -g'
+                sh '${dist} && http-server -p 8890 -o -P http://www.pipeline1.com'
             }
         }
     }
