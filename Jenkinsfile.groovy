@@ -19,12 +19,12 @@ pipeline {
                 sh 'npm run unit && npm run e2e'
             }
         }
-        stage('lint') {
-            steps {
-                echo 'lintCode'
-                sh 'eslint --ext .js,.vue src test/unit test/e2e/specs'
-            }
-        }
+        // stage('lint') {
+         //   steps {
+         //       echo 'lintCode'
+          //      sh 'eslint --ext .js,.vue src test/unit test/e2e/specs'
+          //  }
+       // }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
