@@ -1,28 +1,28 @@
 pipeline {
     agent any
     stages {
-	stage('°²×°ÒÀÀµ') {
+	    stage('install') {
             steps {
-                echo 'npm-install'
-                bat 'npm install --verbose'
+                echo 'install...'
+                sh 'npm install --verbose'
             }
         }
-        stage('Build3') {
+        stage('Build') {
             steps {
                 echo 'building'
-                bat 'node build/build.js'    
+                sh 'node build/build.js'    
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing'
-                bat 'npm run unit && npm run e2e'
+                sh 'npm run unit && npm run e2e'
             }
         }
         stage('lint') {
             steps {
                 echo 'lintCode'
-                bat 'eslint --ext .js,.vue src test/unit test/e2e/specs'
+                sh 'eslint --ext .js,.vue src test/unit test/e2e/specs'
             }
         }
         stage('Deploy') {
