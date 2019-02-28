@@ -10,19 +10,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'building'
-                bat 'node build/build.js'    
+                sh 'node build/build.js'    
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing'
-                bat 'npm run unit && npm run e2e'
+                sh 'npm run unit && npm run e2e'
             }
         }
         stage('lint') {
             steps {
                 echo 'lintCode'
-                bat 'eslint --ext .js,.vue src test/unit test/e2e/specs'
+                sh 'eslint --ext .js,.vue src test/unit test/e2e/specs'
             }
         }
         stage('Deploy') {
