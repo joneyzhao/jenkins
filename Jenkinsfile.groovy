@@ -3,7 +3,7 @@ pipeline {
     stages {
 	    stage('install') {
             steps {
-                echo 'install'
+                echo 'install...'
                 sh 'npm install --verbose'
             }
         }
