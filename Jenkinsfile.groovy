@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
     stages {
@@ -14,21 +13,23 @@ pipeline {
                 sh 'node build/build.js'    
             }
         }
-    //     stage('Test') {
-    //         steps {
-    //             echo 'Testing'
-    //             sh 'npm run unit && npm run e2e'
-    //         }
-    //     }
-    //     stage('lint') {
-    //        steps {
-    //            echo 'lintCode'
-    //            sh 'npm run lint'
-    //        }
-    //    }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+                sh 'npm run unit && npm run e2e'
+            }
+        }
+        stage('lint') {
+           steps {
+               echo 'lintCode'
+               sh 'npm run lint'
+           }
+       }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh 'npm install http-server -g'
+                sh 'cd ${dist} && http-server -p 8000 &'
             }
         }
     }
