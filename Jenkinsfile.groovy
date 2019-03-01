@@ -29,7 +29,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'npm install http-server -g'
-                sh 'cd ${dist} && screen -S httpserver && http-server -p 8000'
+                nohup 'cd ${dist} && http-server -p 8000'
             }
         }
     }
