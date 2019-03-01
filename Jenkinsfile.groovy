@@ -1,3 +1,4 @@
+// def dist = 'C:/Users/赵欢欢/Desktop/jenkins练习/jenkins/dist>'
 pipeline {
     agent any
     stages {
@@ -28,8 +29,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'npm install http-server -g'
-                nohup 'cd ${dist} && http-server -p 8000'
+                sh deploy.sh
             }
         }
     }

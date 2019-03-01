@@ -1,2 +1,3 @@
+#!/bin/sh
 npm install http-server -g
-cd ${dist} && http-server -p 8000
+http-server -p 8000
