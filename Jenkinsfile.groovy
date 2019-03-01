@@ -2,18 +2,18 @@
 pipeline {
     agent any
     stages {
-	//     stage('install') {
-    //         steps {
-    //             echo 'install...'
-    //             sh 'npm install --verbose'
-    //         }
-    //     }
-    //     stage('Build') {
-    //         steps {
-    //             echo 'building'
-    //             sh 'node build/build.js'    
-    //         }
-    //     }
+	    stage('install') {
+            steps {
+                echo 'install...'
+                sh 'npm install --verbose'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'building'
+                sh 'node build/build.js'    
+            }
+        }
     //     stage('Test') {
     //         steps {
     //             echo 'Testing'
