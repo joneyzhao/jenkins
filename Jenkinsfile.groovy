@@ -1,4 +1,4 @@
-// def dist = 'C:/Users/赵欢欢/Desktop/jenkins练习/jenkins/dist>'
+
 pipeline {
     agent any
     stages {
@@ -29,7 +29,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh deploy.sh
             }
         }
     }
