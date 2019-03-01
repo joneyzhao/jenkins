@@ -29,7 +29,8 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'npm install http-server -g'
-                sh 'cd ${dist} && http-server -p 8890'
+                // sh 'cd ${dist} && http-server -p 8890'
+                nohup sh 'cd ${dist} && http-server -p 8890'
             }
         }
     }
