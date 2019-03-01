@@ -2,30 +2,30 @@
 pipeline {
     agent any
     stages {
-	    stage('install') {
-            steps {
-                echo 'install...'
-                sh 'npm install --verbose'
-            }
-        }
-        stage('Build') {
-            steps {
-                echo 'building'
-                sh 'node build/build.js'    
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing'
-                sh 'npm run unit && npm run e2e'
-            }
-        }
-        stage('lint') {
-           steps {
-               echo 'lintCode'
-               sh 'npm run lint'
-           }
-       }
+	//     stage('install') {
+    //         steps {
+    //             echo 'install...'
+    //             sh 'npm install --verbose'
+    //         }
+    //     }
+    //     stage('Build') {
+    //         steps {
+    //             echo 'building'
+    //             sh 'node build/build.js'    
+    //         }
+    //     }
+    //     stage('Test') {
+    //         steps {
+    //             echo 'Testing'
+    //             sh 'npm run unit && npm run e2e'
+    //         }
+    //     }
+    //     stage('lint') {
+    //        steps {
+    //            echo 'lintCode'
+    //            sh 'npm run lint'
+    //        }
+    //    }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
