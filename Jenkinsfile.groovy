@@ -29,12 +29,15 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'npm install http-server -g'
-                sh 'cd ${dist} && http-server -p 8890'
-                sh 'CTRL-C'
+                sh 'http-server -p 8890'
             }
         }
     }
 }
+
+// sh 'CTRL-C'
+
+// sh 'cd ${dist} && http-server -p 8890'
 
 // def dist = 'C:/Users/赵欢欢/Desktop/jenkins练习/jenkins/dist>'
 
