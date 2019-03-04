@@ -44,7 +44,7 @@ export default {
         this.type = 'A'
       }
     },
-    // 自增13
+    // 自增
     increment () {
       this.count++
     },
