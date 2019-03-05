@@ -7,6 +7,12 @@ pipeline {
                 sh 'npm install --verbose'
             }
         }
+        stage('lint') {
+           steps {
+               echo 'lintCode'
+               sh 'npm run lint'
+           }
+        }
         stage('Build') {
             steps {
                 echo 'building'
@@ -19,12 +25,6 @@ pipeline {
                 sh 'npm run unit && npm run e2e'
             }
         }
-        stage('lint') {
-           steps {
-               echo 'lintCode'
-               sh 'npm run lint'
-           }
-       }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
